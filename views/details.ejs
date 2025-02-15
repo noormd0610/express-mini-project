@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Details</title>
+</head>
+<body>
+<div class="bigbox">
+<form action="http://localhost:8080/posts">
+    <button type="submit" id="btn">back to posts</button>
+</form>
+    <img src="<%=post.imglink%>" height="200px" width="220px" alt="" id="imgd">
+    <ul id="text" type="none">
+        <li><b>Id:</b><%= post.id%></li>
+        <li><b>Name:</b><%= post.name%></li>
+        <li><b>Breed:</b><%= post.breed%></li>
+        <li><b>Color Of The Dog:</b> <%= post.color%></li>
+        <li><b>Behaviour:</b><%= post.behavior%></li>
+        <li><b>Summary:</b> <%= post.summary%></li>
+    </ul>
+        
+</div>
+</body>
+</html>

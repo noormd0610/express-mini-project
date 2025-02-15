@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>All Posts</title>
+</head>
+
+<body>
+    <h2>welcomes to dogs world!</h2>
+    <% for (let post of posts){ %>
+        <div id="container">
+            <hr>
+            <img src="<%=post.imglink%>" height="200px" width="220px" alt="">
+            <h4>Name:<b>
+                    <%= post.name%>
+                </b></h4>
+            <h4> Breed: <b>
+                    <%= post.breed%>
+                </b></h4>
+            <h4> behavior: <b>
+                    <%= post.behavior%>
+                </b></h4>
+            <form action="http://localhost:8080/posts/details/<%=post.name%>">
+                <button>Details</button>
+            </form> <br>
+            <form action="http://localhost:8080/posts/edit/<%=post.name%>">
+                <button>Edit</button>
+            </form>
+            <br>
+            <form action="http://localhost:8080/posts/delete/<%=post.name%>?_method=delete" method="post">
+                <button>delete post</button>
+            </form>
+            <hr>
+        </div>
+        <% } %>
+</body>
+
+</html>

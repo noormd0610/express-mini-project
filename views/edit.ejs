@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h2>Edit Post</h2>
+    <form action="http://localhost:8080/posts/edit/<%=post.name%>?_method=PATCH" method="post">
+        <h2>Welcome To @<%= post.name %> Dog World</h2>
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color" placeholder="<%= post.color %>">
+        <br>
+        <br> 
+        <label for="summary">Summary:</label>
+        <textarea name="summary" id="summary" cols="60" rows="10" placeholder="<%= post.summary %>"></textarea>
+        <br> <br> 
+        <label for="behavior">behavior:</label>
+        <input type="text" name="behavior" id="behavior" placeholder="<%= post.behavior %>">
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
